@@ -25,7 +25,7 @@ module Valentin
   end
 
   def kill
-    players_to_die = opponents.select{|p| p!=self}.select{|p| killable? p}
+    players_to_die = opponents.select{|p| killable? p}
     if players_to_die.count > 0
       return players_to_die[rand(players_to_die.count - 1)]
     end
